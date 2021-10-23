@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core@5.4.0/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core@5.4.0/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://app.wellrevolution.com/static/js/axios.min.js"></script>
+    <script src="https://app.wellrevolution.com/static/js/moment.min.js"></script>
+    <script src="https://app.wellrevolution.com/static/js/hammer.min.js"></script>
+
+    <style>
+      /* css that tailwind doesn't support */
+      .menu {
+        background-color: #494066;
+        --background: #494066;
+      }
+
+      ion-menu {
+        --ion-background-color: #494066;
+      }
+
+      ion-split-pane {
+        --side-max-width: 237px;
+        --side-width: 237px;
+        --side-min-width: 237px;
+      }
+
+      .sidebar-header {
+        height: 96px;
+      }
+
+      .sidebar-header .logo {
+        padding-left: 16px;
+        padding-top: 27px;
+      }
+
+      .grid-header {
+        border-style: solid;
+        border-bottom-width: 1px;
+        border-color: #e0e0e0;
+      }
+    </style>
+    <script type="module">
+      import {
+        h,
+        render,
+        createRef,
+      } from 'https://app.wellrevolution.com/static/js/preact@10.5.14.module.js';
+      import {
+        useState,
+        useEffect,
+      } from 'https://app.wellrevolution.com/static/js/preact.hooks@10.5.14.module.js';
+      import htm from 'https://app.wellrevolution.com/static/js/htm@3.1.0.module.js';
+      import {
+        Router,
+        route,
+      } from 'https://app.wellrevolution.com/static/js/preact-router@3.2.1.es.js';
+
+      // Add a request interceptor
+      axios.interceptors.request.use(
+        function (config) {
+          // config.headers = data.headers;
+          // config.baseURL = `${data.baseURL}/api/`;
+          return config;
+        },
+        function (error) {
+          return Promise.reject(error);
+        }
+      );
+
+      // Initialize htm with Preact
+      const html = htm.bind(h);
+
+      function VerificationRequests() {
+        const [results, setResults] = useState([]);
+
+        useEffect(() => {
+          axios
+            .get('labresults')
+            .then((payload) => {
+              console.log('payload', payload);
+            })
+            .catch(() => {
+              // alert('Error, please try again');
+            });
+        }, []);
+
+        return html`
+          <ion-header>
+            <div>
+              <h2>Verification Requests</h2>
+              <div class="flex flex-row">
+                <ion-item lines="none">
+                  <ion-label>Pending Verifications</ion-label>
+                  <ion-badge lines="none">22</ion-badge>
+                </ion-item>
+                <ion-item lines="none">
+                  <ion-label>Verified</ion-label>
+                  <ion-badge slot="end">9</ion-badge>
+                </ion-item>
+              </div>
+              <ion-grid>
+                <ion-row class="grid-header">
+                  <ion-col>Name</ion-col>
+                  <ion-col>Signed up</ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </ion-header>
+          <ion-content id="main">
+            <ion-grid>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>Luis</ion-col>
+                <ion-col>Nice Date</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-content>
+        `;
+      }
+
+      let appHistory = [];
+
+      function App() {
+        const onRouteChange = (e) => {
+          appHistory.push(e.url);
+        };
+
+        return html`
+            <ion-app>
+                <ion-split-pane content-id="main" class="split-pane">
+                    <!--  the side menu  -->
+                    <ion-menu content-id="main" class="menu">
+                        <ion-header class="sidebar-header ion-no-border">
+                          <img class="logo" src="https://app.wellrevolution.com/static/images/wr-coin-40px.svg"/>
+                        </ion-header>
+                        <ion-content>
+                          <ion-list>
+                            <ion-item class="text-white" lines="none">
+                              <ion-icon class="text-white pr-3" name="checkmark-circle-outline"></ion-icon>
+                              Verification Requests
+                            </ion-item>
+                            <ion-item class="text-white" lines="none">
+                              <ion-icon class="text-white pr-3" name="people-outline"></ion-icon>
+                              All users
+                            </ion-item>
+                          </ion-list>
+                          <ion-item class="text-white fixed bottom-0 pb-4" lines="none">
+                              <ion-icon class="text-white pr-3" name="log-out-outline"></ion-icon>
+                              Logout
+                            </ion-item>
+                        </ion-content>
+                    </ion-menu>
+
+                    <!-- the main content -->
+                        <${Router} onChange=${onRouteChange}>
+                            <${VerificationRequests} path="/" />
+                        </${Router}>
+                </ion-split-pane>
+
+
+
+            </ion-app>
+        `;
+      }
+
+      render(html`<${App} />`, document.body);
+    </script>
+  </head>
+  <body></body>
+</html>
