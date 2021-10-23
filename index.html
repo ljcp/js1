@@ -64,6 +64,29 @@
         border-bottom-width: 1px;
         border-color: #e0e0e0;
       }
+
+      .Verification-Requests {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #0c0033;
+        }
+        .side-menu-item {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.29;
+            letter-spacing: normal;
+            text-align: left;
+            color: #f5f9ff;
+        }
     </style>
     <script type="module">
       import {
@@ -111,199 +134,35 @@
         }, []);
 
         return html`
-          <ion-header>
-            <div>
-              <h2>Verification Requests</h2>
-              <div class="flex flex-row">
-                <ion-item lines="none">
-                  <ion-label>Pending Verifications</ion-label>
-                  <ion-badge lines="none">22</ion-badge>
-                </ion-item>
-                <ion-item lines="none">
-                  <ion-label>Verified</ion-label>
-                  <ion-badge slot="end">9</ion-badge>
-                </ion-item>
-              </div>
-              <ion-grid>
-                <ion-row class="grid-header">
-                  <ion-col>Name</ion-col>
-                  <ion-col>Signed up</ion-col>
-                </ion-row>
-              </ion-grid>
+        <div id="main" class="pl-5 pt-8">
+          <div>
+            <p class="Verification-Requests">Verification Requests</p>
+            <div class="flex flex-row">
+            <ion-item lines="none">
+                <ion-label>Pending Verifications</ion-label>
+                <ion-badge lines="none">22</ion-badge>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label>Verified</ion-label>
+                <ion-badge slot="end">9</ion-badge>
+            </ion-item>
             </div>
-          </ion-header>
-          <ion-content id="main">
-            <ion-grid>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col>Luis</ion-col>
-                <ion-col>Nice Date</ion-col>
-              </ion-row>
+            <ion-grid class="px-0">
+            <ion-row class="grid-header">
+                <ion-col>Name</ion-col>
+                <ion-col>Signed up</ion-col>
+            </ion-row>
+            </ion-grid>
+          </div>
+          <ion-content > 
+            <ion-grid class="px-0">
               <ion-row>
                 <ion-col>Luis</ion-col>
                 <ion-col>Nice Date</ion-col>
               </ion-row>
             </ion-grid>
           </ion-content>
+        </div>
         `;
       }
 
@@ -324,11 +183,11 @@
                         </ion-header>
                         <ion-content>
                           <ion-list>
-                            <ion-item class="text-white" lines="none">
+                            <ion-item class="text-white side-menu-item" lines="none">
                               <ion-icon class="text-white pr-3" name="checkmark-circle-outline"></ion-icon>
                               Verification Requests
                             </ion-item>
-                            <ion-item class="text-white" lines="none">
+                            <ion-item class="text-white side-menu-item" lines="none">
                               <ion-icon class="text-white pr-3" name="people-outline"></ion-icon>
                               All users
                             </ion-item>
